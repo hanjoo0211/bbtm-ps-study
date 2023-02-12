@@ -1,0 +1,13 @@
+n, m = map(int, input().split())
+a = [list(map(int, input().split())) for _ in range(n)]
+b = [list(map(int, input().split())) for _ in range(n)]
+
+for i in range(n):
+    for j in range(m):
+        a[i][j] += b[i][j]
+
+for i in range(n):
+    r = ''
+    for j in range(m):
+        r += str(a[i][j]) + ' '
+    print(r[:-1])
